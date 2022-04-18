@@ -1,3 +1,55 @@
+var form1 = document.getElementById('form-1');
+var form2 = document.getElementById('form-2');
+var form3 = document.getElementById('form-3');
+var form4 = document.getElementById('form-4');
+var form5 = document.getElementById('form-5');
+ 
+var next1 = document.getElementById('next1');
+var next2 = document.getElementById('next2');
+var next3 = document.getElementById('next3');
+var next4 = document.getElementById('next4');
+
+var prev1 = document.getElementById('prev1');
+var prev2 = document.getElementById('prev2');
+var prev3 = document.getElementById('prev3');
+var prev4 = document.getElementById('prev4');
+
+next1.onclick = function(){
+    form1.style.left = "-400px";
+    form2.style.left = "20px";
+}
+prev1.onclick = function(){
+    form1.style.left = "20px";
+    form2.style.left = "400px";
+}
+
+next2.onclick = function(){
+    form2.style.left = "-400px";
+    form3.style.left = "20px";
+}
+prev2.onclick = function(){
+    form2.style.left = "20px";
+    form3.style.left = "400px";
+}
+
+next3.onclick = function(){
+    form3.style.left = "-400px";
+    form4.style.left = "20px";
+}
+prev3.onclick = function(){
+    form3.style.left = "20px";
+    form4.style.left = "400px";
+}
+
+next4.onclick = function(){
+    form4.style.left = "-400px";
+    form5.style.left = "20px";
+}
+prev4.onclick = function(){
+    form4.style.left = "20px";
+    form5.style.left = "400px";
+}
+
 const usernameInput = document.querySelector('#username');
 const emailInput = document.querySelector('#email');
 const phoneNumberInput = document.querySelector('#phonenumber');
@@ -99,54 +151,34 @@ function isPassword(password) {
 	return passwordPattern.test(password);
 }  
 
-var form1 = document.getElementById('form-1');
-var form2 = document.getElementById('form-2');
-var form3 = document.getElementById('form-3');
-var form4 = document.getElementById('form-4');
-var form5 = document.getElementById('form-5');
- 
-var next1 = document.getElementById('next1');
-var next2 = document.getElementById('next2');
-var next3 = document.getElementById('next3');
-var next4 = document.getElementById('next4');
-
-var prev1 = document.getElementById('prev1');
-var prev2 = document.getElementById('prev2');
-var prev3 = document.getElementById('prev3');
-var prev4 = document.getElementById('prev4');
-
-next1.onclick = function(){
-    form1.style.left = "-400px";
-    form2.style.left = "20px";
-}
-prev1.onclick = function(){
-    form1.style.left = "20px";
-    form2.style.left = "400px";
+next1.onclick = () => {
+	var inputFields = document.getElementsByClassName('className');
+	var flag = true;
+	for(index=0;index<inputFields.length;index++)
+	{
+		if(inputFields[index].value=='')
+		{
+			flag=false;
+			//alert('Please fill this field');
+			inputFields[index].nextElementSibling.textContent = 'Please fill this field';
+		}
+	}
+	if(flag)
+	next1();
 }
 
-next2.onclick = function(){
-    form2.style.left = "-400px";
-    form3.style.left = "20px";
-}
-prev2.onclick = function(){
-    form2.style.left = "20px";
-    form3.style.left = "400px";
+//dob validation
+date.onchange=(event)=>{
+	var date=event.target.value;//date in String
+	var dateFormat=new Date(date);//date in date
+	var currentDate=new Date();
+	var dateDiff=currentDate.getFullYear()-dateFormat.getFullYear();
+	if(dateDiff>=18 && dateDiff<=60){
+		event.target.nextElementSibling.textContent = '';
+	}
+	else{
+		alert("Age Should be between 18 to 60");
+	}
+
 }
 
-next3.onclick = function(){
-    form3.style.left = "-400px";
-    form4.style.left = "20px";
-}
-prev3.onclick = function(){
-    form3.style.left = "20px";
-    form4.style.left = "400px";
-}
-
-next4.onclick = function(){
-    form4.style.left = "-400px";
-    form5.style.left = "20px";
-}
-prev4.onclick = function(){
-    form4.style.left = "20px";
-    form5.style.left = "400px";
-}

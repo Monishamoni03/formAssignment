@@ -94,8 +94,18 @@ form button {
 .input-group {
 	margin: 0px 0;  
 	position: relative;
-  /*  display: flex;*/
+   /* display: flex; */
   /* color: aqua; */
+}
+.input {
+    margin: 10px 0;
+    position: relative;
+    display: flex;
+}
+.input label {
+    display: inline-block;
+	margin-bottom: 2px;   
+    color: orchid;
 }
 
 .input-group label {
