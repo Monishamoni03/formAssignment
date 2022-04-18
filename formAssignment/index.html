@@ -22,34 +22,34 @@
             <div class = "title">
                 <h2 class = "heading">BASIC</h2>
             </div>
-            <!--first name-->
-            <div class = "input-group">
-                <label for = "username">First Name</label>
-                <input type = "text" id = "username" placeholder = "Enter your First Name" name = "username" required = "required" onblur = "validateName()">
-                <p>Error Message</p>
-            </div>
-            <!--last name-->
-            <div class = "input-group">
-                <label for = "username">Last Name</label>
-                <input type = "text" id = "username" placeholder = "Enter your Last Name" name = "username" >
-                <p>Error Message</p>
-            </div>
             <!--EMAIL-->
             <div class = "input-group">
                 <label for = "email">Email</label>
-                <input type = "email" id = "email" placeholder="Enter your Email Id" name = "email" onblur = "validateEmail()">
+                <input type = "email" id = "email" class ="className" placeholder="Enter your Email Id" name = "email" onblur = "validateEmail()">
                 <p>Error Message</p>
             </div>
             <!--Password-->
             <div class = "input-group">
                 <label for = "password">Password</label>
-                <input type = "password" id = "password" placeholder="Type the Password" name = "password" onblur = "validatePassword()">
+                <input type = "password" id = "password" class ="className" placeholder="Type the Password" name = "password" onblur = "validatePassword()">
                 <p>Error Message</p>
             </div>
             <!--Confirm Password-->
             <div class = "input-group">
                 <label for = "confirm-password">Confirm Password</label>
-                <input type = "password" id = "confirm-password" placeholder = "Type the Confirm Password" name = "confirmpassword" onblur = "validateConfirmPassword()">
+                <input type = "password" id = "confirm-password" class ="className" placeholder = "Type the Confirm Password" name = "confirmpassword" onblur = "validateConfirmPassword()">
+                <p>Error Message</p>
+            </div>
+            <!--first name-->
+            <div class = "input-group">
+                <label for = "username">First Name</label>
+                <input type = "text" id = "username" class ="className" placeholder = "Enter your First Name" name = "username" required = "required" onblur = "validateName()">
+                <p>Error Message</p>
+            </div>
+            <!--last name-->
+            <div class = "input-group">
+                <label for = "username">Last Name</label>
+                <input type = "text" id = "username" class ="className" placeholder = "Enter your Last Name" name = "username" >
                 <p>Error Message</p>
             </div>
             <!--Next button-->
@@ -67,11 +67,9 @@
             <div class="input-group">
                 <label for="dob">DOB</label>
                 <input type="date" id="date" name="dateEntry" required="required" >
-                <span id="dob"></span>
-                <!--p>Error Message</p-->
             </div>
             <!--gender-->
-            <div class="input-group">
+            <div class="input">
                 <br><label for="gender">Gender</label>
                 <input type="radio" id="male" name="gender" value="Male">
                 <label for="gender">Male</label>
@@ -90,7 +88,7 @@
             </div-->
             <!--Address-->
             <div class="input-group">
-               <br> <label for="address">ADDRESS</label>
+               <label for="address">ADDRESS</label>
                 <!--input type="text" id="address" placeholder="Enter your Address" name="address"-->
                 <textarea name="address" id="address" cols="35" rows="3"></textarea>
                 <p>Error Message</p>
@@ -99,6 +97,7 @@
             <div class="input-group">
                 <label for="state">STATE</label>
                 <select id="state" required="required">
+                <option value="data">Choose your state</option>
                 <option value="andhra">Andhra Pradesh</option>
                 <option value="bihar">Bihar</option>
                 <option value="goa">Goa</option>
@@ -195,6 +194,7 @@
             <div class="input-group">
              <label for="department">Department/Practice</label><br>
              <br><select id="department" required="required">
+                <option value="data">Select your practice</option>
                 <option value=".net">.NET</option>
                 <option value="java">Java</option>
                 <option value="lamp">LAMP</option>
@@ -223,4 +223,21 @@
 </html>
 
 
-        
+
+        <!--div class="step-row">
+            <div id="progress"></div>
+            <div class="step-col">BASIC</div>
+            <div class="step-col">OTHERS</div>
+            <div class="step-col">WORK</div>
+            <div class="step-col">EDUCATION</div>
+            <div class="step-col">TEAM</div>
+        </div-->
+
+        <!--div class="step-row">
+                            <div id="progress"></div>
+                            <div class="step-col"><li>BASIC</li></div>
+                            <div class="step-col"><li>OTHERS</li></div>
+                            <div class="step-col"><li>WORK</li></div>
+                            <div class="step-col"><li>EDUCATION</li></div>
+                            <div class="step-col"><li>TEAM</li></div>
+                        </div-->
