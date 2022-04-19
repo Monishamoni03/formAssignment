@@ -170,6 +170,58 @@ function page1() {
     }
 }
 
+function page2() {
+	if(check3 == 1) {
+		next2.onclick = function(){
+			form2.style.left = "-400px";
+			form3.style.left = "20px";
+		}
+		prev2.onclick = function(){
+			form2.style.left = "20px";
+			form3.style.left = "400px";
+		}
+	}
+	else{
+        alert("Please fill all the required details to move to the next step");
+    }
+}
+
+function page3() {
+	next3.onclick = function(){
+		form3.style.left = "-400px";
+		form4.style.left = "20px";
+	}
+	prev3.onclick = function(){
+		form3.style.left = "20px";
+		form4.style.left = "400px";
+	}
+}
+
+function page4() {
+	next4.onclick = function(){
+		form4.style.left = "-400px";
+		form5.style.left = "20px";
+	}
+	prev4.onclick = function(){
+		form4.style.left = "20px";
+		form5.style.left = "400px";
+	}
+}
+/*function page5() {
+	if(checkbox.checked == true) {
+	next4.onclick = function(){
+		form4.style.left = "-400px";
+		form5.style.left = "20px";
+	}
+	prev4.onclick = function(){
+		form4.style.left = "20px";
+		form5.style.left = "400px";
+	}
+  } else {
+	   alert("Please accept the terms and condition");
+  }
+}
+
 /*next1.onclick = function(){
     form1.style.left = "-400px";
     form2.style.left = "20px";
@@ -178,7 +230,6 @@ prev1.onclick = function(){
     form1.style.left = "20px";
     form2.style.left = "400px";
 }
-
 next2.onclick = function(){
     form2.style.left = "-400px";
     form3.style.left = "20px";
@@ -187,7 +238,6 @@ prev2.onclick = function(){
     form2.style.left = "20px";
     form3.style.left = "400px";
 }
-
 next3.onclick = function(){
     form3.style.left = "-400px";
     form4.style.left = "20px";
@@ -196,7 +246,6 @@ prev3.onclick = function(){
     form3.style.left = "20px";
     form4.style.left = "400px";
 }
-
 next4.onclick = function(){
     form4.style.left = "-400px";
     form5.style.left = "20px";
@@ -219,4 +268,3 @@ date.onchange = (event) => {
 		alert("Age Should be between 18 to 60");
 	}
 }
-
