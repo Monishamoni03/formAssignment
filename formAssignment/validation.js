@@ -107,18 +107,35 @@ function isNameValid(username) {
 	const alphabets = /^[A-Za-z]+$/;
 	return alphabets.test(username);
 }
+
 function isEmailValid(email) {
 	const reg = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
 	return reg.test(email);
 }
+
 function isPhoneNumber(phonenumber) {
 	const phoneNumberPattern = /^(0|[+91]{3})?[6-9][0-9]{9}$/;
 	return phoneNumberPattern.test(phonenumber);
 }
+
 function isPassword(password) {
 	var passwordPattern = /^(?=.*[0-9])(?=.*[!@#$%^&*])[a-zA-Z0-9!@#$%^&*]{6,15}$/;
 	return passwordPattern.test(password);
 }  
+
+//dob validation
+date.onchange = (event) => {
+	const date = event.target.value;//date in String
+	const dateFormat = new Date(date);//date in date
+	const currentDate = new Date();
+	const dateDiff = currentDate.getFullYear()-dateFormat.getFullYear();
+	if(dateDiff >= 18 && dateDiff <= 60){
+		event.target.nextElementSibling.textContent = '';
+	}
+	else{
+		alert("Age should be between 18 to 60");
+	}
+}
 
 var form1 = document.getElementById('form-1');
 var form2 = document.getElementById('form-2');
@@ -135,6 +152,7 @@ var prev1 = document.getElementById('prev1');
 var prev2 = document.getElementById('prev2');
 var prev3 = document.getElementById('prev3');
 var prev4 = document.getElementById('prev4');
+
 
 function page1() {
 	if(check1 == 1 && check2 == 1 && check4 == 1 && check5 == 1) {
@@ -164,7 +182,7 @@ function page2() {
 		}
 	}
 	else{
-        alert("Please fill all the required details to move to the next step");
+        alert("Please fill all the required details to move to next step");
     }
 }
 
@@ -189,7 +207,6 @@ function page4() {
 		form5.style.left = "400px";
 	}
 }
-
 /*function page5() {
 	if(checkbox.checked == true) {
 	next4.onclick = function(){
@@ -203,18 +220,54 @@ function page4() {
   } else {
 	   alert("Please accept the terms and condition");
   }
+}
+
+/*next1.onclick = function(){
+    form1.style.left = "-400px";
+    form2.style.left = "20px";
+}
+prev1.onclick = function(){
+    form1.style.left = "20px";
+    form2.style.left = "400px";
+}
+next2.onclick = function(){
+    form2.style.left = "-400px";
+    form3.style.left = "20px";
+}
+prev2.onclick = function(){
+    form2.style.left = "20px";
+    form3.style.left = "400px";
+}
+next3.onclick = function(){
+    form3.style.left = "-400px";
+    form4.style.left = "20px";
+}
+prev3.onclick = function(){
+    form3.style.left = "20px";
+    form4.style.left = "400px";
+}
+next4.onclick = function(){
+    form4.style.left = "-400px";
+    form5.style.left = "20px";
+}
+prev4.onclick = function(){
+    form4.style.left = "20px";
+    form5.style.left = "400px";
 }*/
 
-//DOB validation
-date.onchange = (event) => {
-	var date = event.target.value;//date in String
-	var dateFormat = new Date(date);//date in date
-	var currentDate = new Date();
-	var dateDiff = currentDate.getFullYear()-dateFormat.getFullYear();
-	if(dateDiff >= 18 && dateDiff <= 60){
-		event.target.nextElementSibling.textContent = '';
+
+/*next1.onclick = () => {
+	var inputFields = document.getElementsByClassName('className');
+	var flag = true;
+	for(index=0;index<inputFields.length;index++)
+	{
+		if(inputFields[index].value=='')
+		{
+			flag=false;
+			//alert('Please fill this field');
+			inputFields[index].nextElementSibling.textContent = 'Please fill this field';
+		}
 	}
-	else{
-		alert("Age Should be between 18 to 60");
-	}
-}
+	if(flag)
+	next1();
+}*/
