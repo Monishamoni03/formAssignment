@@ -3,20 +3,13 @@
     <head>
         <title>Employee Registration Form</title>
         <link rel = "stylesheet" href = "style.css" />
+        <!-- <script src="validation.js"></script> -->
     </head>
     <body>
-        <header class = "main-header">
-            <nav class = "nav main-nav">
-                <label class = "heading">EMPLOYEE REGISTRATION!</label>
-                <ul>
-                    <li><a href = "#">BASIC</a></li>
-                    <li><a href = "#">OTHERS</a></li>
-                    <li><a href = "#">WORK</a></li>
-                    <li><a href = "#">EDUCATION</a></li>
-                    <li><a href = "#">TEAM</a></li>
-                </ul>
-            </nav>
+        <header class="header">
+            <label>EMPLOYEE REGISTRATION!</label>
         </header>
+
     <div class = "container">
         <form id = "form-1">
             <div class = "title">
@@ -24,31 +17,31 @@
             </div>
             <!--EMAIL-->
             <div class = "input-group">
-                <label for = "email">Email</label>
-                <input type = "email" id = "email" class ="className" placeholder="Enter your Email Id" name = "email" onblur = "validateEmail()">
+                <label for = "email">EMAIL *</label>
+                <input type = "email" id = "email" class ="className" placeholder="eg:email@gmail.com" name = "email" onblur = "validateEmail()">
                 <p>Error Message</p>
             </div>
             <!--Password-->
             <div class = "input-group">
-                <label for = "password">Password</label>
-                <input type = "password" id = "password" class ="className" placeholder="Type the Password" name = "password" onblur = "validatePassword()">
+                <label for = "password">PASSWORD *</label>
+                <input type = "password" id = "password" class ="className" placeholder="eg:Example@123" name = "password" onblur = "validatePassword()">
                 <p>Error Message</p>
             </div>
             <!--Confirm Password-->
             <div class = "input-group">
-                <label for = "confirm-password">Confirm Password</label>
-                <input type = "password" id = "confirm-password" class ="className" placeholder = "Type the Confirm Password" name = "confirmpassword" onblur = "validateConfirmPassword()">
+                <label for = "confirm-password">CONFIRM PASSWORD *</label>
+                <input type = "password" id = "confirm-password" class ="className" placeholder = "Type the same password" name = "confirmpassword" onblur = "validateConfirmPassword()">
                 <p>Error Message</p>
             </div>
             <!--first name-->
             <div class = "input-group">
-                <label for = "username">First Name</label>
-                <input type = "text" id = "username" class ="className" placeholder = "Enter your First Name" name = "username" required = "required" onblur = "validateName()">
+                <label for = "username">FIRST NAME *</label>
+                <input type = "text" id = "username" class ="className" placeholder = "eg:Name/name" name = "username" required = "required" onblur = "validateName()">
                 <p>Error Message</p>
             </div>
             <!--last name-->
             <div class = "input-group">
-                <label for = "username">Last Name</label>
+                <label for = "username">LAST NAME</label>
                 <input type = "text" id = "username" class ="className" placeholder = "Enter your Last Name" name = "username" >
                 <p>Error Message</p>
             </div>
@@ -65,62 +58,53 @@
             </div>
             <!--dob-->
             <div class="input-group">
-                <label for="dob">DOB</label>
+                <label for="dob" placeholder="Age limit:18 to 60">DOB *</label>
                 <input type="date" id="date" name="dateEntry" required="required" >
             </div>
             <!--gender-->
             <div class="input">
-                <br><label for="gender">Gender</label>
+                <br><label for="gender">GENDER*</label>
                 <input type="radio" id="male" name="gender" value="Male">
-                <label for="gender">Male</label>
+                <label for="gender1">Male</label>
                 <input type="radio" id="female" name="gender" value="Female">
-                <label for="gender">Female</label>
+                <label for="gender1">Female</label>
                 <input type="radio" id="other" name="gender" value="Other">
-                <label for="gender">Other</label>
+                <label for="gender1">Other</label>
             </div>
-            <!--div class="radiobutton">
-                <label for="gender">GENDER</label>
-                <input type="radio" name="gender" value="Male" required="required">Male
-                <input type="radio" name="gender" value="Female">Female
-                <input type="radio" name="gender" value="Other">Other
-                <span id="gender"></span>
-                <--p>Error Message</p->
-            </div-->
             <!--Address-->
             <div class="input-group">
                <label for="address">ADDRESS</label>
-                <!--input type="text" id="address" placeholder="Enter your Address" name="address"-->
-                <textarea name="address" id="address" cols="35" rows="3"></textarea>
+                <textarea name="address" id="address" cols="35" rows="3" placeholder="Enter your address..."></textarea>
                 <p>Error Message</p>
             </div>
             <!--State-->
             <div class="input-group">
-                <label for="state">STATE</label>
-                <select id="state" required="required">
-                <option value="data">Choose your state</option>
-                <option value="andhra">Andhra Pradesh</option>
-                <option value="bihar">Bihar</option>
-                <option value="goa">Goa</option>
-                <option value="kerala">Kerala</option>
-                <option value="karnataka">Karnataka</option>
-                <option value="punjab">Punjab</option>
-                <option value="tamilnadu">Tamil Nadu</option>
-                <option value="westbengal">West Bengal</option>
-              </select>
+                <label for="state">STATE *</label>
+                <input list="states" name="state" id="state">
+                <datalist id="states">
+                <option value="Andhra Pradesh">
+                <option value="Bihar">
+                <option value="Goa">
+                <option value="Kerala">
+                <option value="Karnataka">
+                <option value="Punjab">
+                <option value="Tamil Nadu">
+                <option value="West Bengal">
+                </datalist>
+              <!-- </select> -->
             </div>
             <!--Phone Number-->
 		   <br> <div class="input-group">
-			    <label for="phonenumber">MOBILE NUMBER</label>
-			    <input type="phonenumber" id="phonenumber" placeholder="Type your Mobile number" name="phonenumber" onblur="validatePhone()">
+			    <label for="phonenumber">MOBILE NUMBER *</label>
+			    <input type="tel" id="phonenumber" placeholder="mobile number should start with above 6" name="phonenumber" onblur="validatePhone()">
 			    <p>Error Message</p>
 		    </div>
-            <!--Next button-->
+            <!--Prev & Next button-->
             <div class="btn-box">
                 <button type="button" id="prev1">Previous</button>
                 <button type="button" id="next2" onclick="page2()">Next</button>
             </div>
 	    </form>
-
 
         <!--3rd work-->
 
@@ -139,10 +123,10 @@
             
             <!--Overall Years of Experience-->
             <div class="input-group">
-                <br><label for="experience">Overall Years of Experience</label>
+                <br><label for="experience">OVERALL YEARS OF EXPERIENCE</label>
                 <input type="number" id="experience" placeholder="Enter your job experience" name="experience" >
             </div>
-            <!--Prev &Next button-->
+            <!--Prev & Next button-->
             <div class="btn-box">
                 <br><button type="button" id="prev2">Previous</button>
                 <button type="button" id="next3" onclick="page3()">Next</button>
@@ -157,7 +141,7 @@
             </div>
             <!--graduation-->
             <div class="input-group">
-                <br><label for="graduation">Graduation</label><br>
+                <br><label for="graduation">GRADUATION *</label><br>
                 <br><select name="grad" id="graduation" multiple>
                 <option value="sslc">SSLC</option>
                 <option value="hsc">HSC</option>
@@ -168,7 +152,7 @@
             </div>
             <!--Year of Passing-->
             <div class="input-group">
-                <br><label for="year">Year of Passing</label>
+                <br><label for="year">YEAR OF PASSING *</label>
                 <input type="month" id="year" name="year" required="true"><br>
             </div>
             <!--Prev &Next button-->
@@ -186,19 +170,18 @@
             </div>
             <!--department/practice-->
             <div class="input-group">
-             <label for="department">Department/Practice</label><br>
-             <br><select id="department" required="required">
-                <option value="data">Select your practice</option>
-                <option value=".net">.NET</option>
-                <option value="java">Java</option>
-                <option value="lamp">LAMP</option>
-                <option value="oracle">Oracle</option>
-              </select>
+             <label for="department">DEPARTMENT/PRACTICE *</label><br>
+             <input list="practice" name="department" id="department">
+                <datalist id="practice">
+                <option value=".NET">
+                <option value="Java">
+                <option value="LAMP">
+                <option value="Oracle">
+                </datalist>
             </div>
             <!--terms & condition-->
             <div class="terms-box">
-                
-               <br> <input type="checkbox" id="terms" name="terms" checked>
+               <br> <input type="checkbox" id="terms" name="terms">
                 <label for="terms">I agree to the Terms and Condition</label>
                 
             </div>
@@ -212,46 +195,7 @@
         </form>        
 
     </div>
-        <script src="validation.js"></script>
+     <script src="validation.js"></script>
     </body>
+
 </html>
-
-
-
-        <!--div class="step-row">
-            <div id="progress"></div>
-            <div class="step-col">BASIC</div>
-            <div class="step-col">OTHERS</div>
-            <div class="step-col">WORK</div>
-            <div class="step-col">EDUCATION</div>
-            <div class="step-col">TEAM</div>
-        </div-->
-
-        <!--div class="step-row">
-                            <div id="progress"></div>
-                            <div class="step-col"><li>BASIC</li></div>
-                            <div class="step-col"><li>OTHERS</li></div>
-                            <div class="step-col"><li>WORK</li></div>
-                            <div class="step-col"><li>EDUCATION</li></div>
-                            <div class="step-col"><li>TEAM</li></div>
-                        </div-->
-
-
-
-        <!--div class="step-row">
-            <div id="progress"></div>
-            <div class="step-col">BASIC</div>
-            <div class="step-col">OTHERS</div>
-            <div class="step-col">WORK</div>
-            <div class="step-col">EDUCATION</div>
-            <div class="step-col">TEAM</div>
-        </div-->
-
-        <!--div class="step-row">
-                            <div id="progress"></div>
-                            <div class="step-col"><li>BASIC</li></div>
-                            <div class="step-col"><li>OTHERS</li></div>
-                            <div class="step-col"><li>WORK</li></div>
-                            <div class="step-col"><li>EDUCATION</li></div>
-                            <div class="step-col"><li>TEAM</li></div>
-                        </div-->
