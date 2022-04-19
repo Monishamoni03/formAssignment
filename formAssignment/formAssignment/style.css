@@ -1,0 +1,198 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;     /*automatic height and width*/
+}
+
+body {
+    display: flex;
+	justify-content: center;
+	align-items: center;          /*container in center of the page*/
+	min-height: 100vh; 
+    /* overflow: hidden; */
+}
+
+.heading {                  /*emp reg heading*/
+    color: rgb(87, 46, 165);
+    font-size: 20px;
+    text-align: center;
+}
+  /* emp reg */
+.header {
+    height: max-content;
+    justify-content: center;
+    text-align: center;
+    top: 50px;
+    position: fixed;
+    font-size: 30px;
+    color: rgb(35, 25, 119);
+}
+
+h2 {                         /*fields*/
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.container {
+    width: 350px;
+    height: 500px;
+    background-color: lightsteelblue;
+    border-radius: 5px;
+    position: relative;    /*to set the form inside the container*/
+    margin: 5% auto;       /*to set the nav bar in full width*/
+    overflow: hidden;      /*next fields will be hidden*/
+}
+
+.container form {
+    width: 300px;
+    position: absolute;     /*inside the form in center position*/
+    left: 25px;
+    transition: 1s;
+}
+
+form input {
+    width: 100%;
+    padding: 5px 0;
+    margin: 5px 0;
+    border-bottom: 1px solid rgb(17, 149, 182);
+    outline: none;
+}
+
+.btn-box {
+    width: 100%;
+    margin: 0px auto;
+    text-align: center;
+}
+
+form button { 
+    width: 110px;
+    height: 40px;
+    border-radius: 10px;
+    margin:  0 15px;   /*space btn prev & next*/
+    color: blueviolet;
+    cursor: pointer;
+}
+
+form button:hover {
+    background-color: lightblue;
+    width: 110px;
+    height: 40px;
+    border-radius: 10px;
+    margin:  0 15px;   /*space btn prev & next*/
+}
+
+#form-1 {
+    width: 300px;
+	padding: 20px;     /*outside the fields*/
+    /* overflow: hidden; */
+}
+
+#form-2 {
+    left: 500px;
+}
+
+#form-3 {
+    left: 500px;
+}
+
+#form-4 {
+    left: 500px;
+}
+
+#form-5{
+    left: 500px;
+}
+
+.error {
+	color: red;
+	font-size: 14px;
+	margin-top: 6px;
+}
+
+.input-group {
+	margin: 0px 0;  
+	position: relative;
+   /* display: flex; */
+  /* color: aqua; */
+}
+
+.input {
+    margin: 10px 0;
+    position: relative;
+    display: flex;
+}
+
+.input label {
+    display: inline-block;
+	margin-bottom: 2px;   
+    color: darkblue;
+}
+
+.input-group label {
+	display: inline-block;
+	margin-bottom: 2px;   
+    color: darkblue;
+}
+
+.input-group input {
+	display: block;
+	width: 100%;      /*i/p box width*/
+	padding: 8px;
+    margin: 0%;
+   /* color: yellowgreen;   /*indication clr*/
+}
+
+.success input{
+	border: 3px green solid;
+}
+
+.input-group i{
+	position: absolute;
+	right: 10px;
+	top: 35px;
+	visibility: hidden;
+}
+
+.error input{
+	border: 3px red solid;
+}
+
+.input-group p{
+	font-size: 15px;
+	color: red;
+	visibility: hidden;
+}
+
+.error p{
+	visibility: visible;
+}
+
+select {
+    width: 200px;     /*state field*/
+}
+
+#form-3[type="radio"] {
+    width: 10px;
+}
+
+.terms-box {
+    display:block;
+    padding: 10px;
+    margin: 10px;
+    border: 2px solid #ddd;
+    background-color: #eee;
+    width: 280px;
+}
+
+#terms { 
+    width: 20px;
+} 
+
+.thanks {
+    /*min-height: 100vh; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 50%;
+    color: blue;
+} 
