@@ -13,9 +13,19 @@ body {
 }
 
 .heading {                  /*emp reg heading*/
-    color: tomato;
+    color: rgb(87, 46, 165);
     font-size: 20px;
     text-align: center;
+}
+  /* emp reg */
+.header {
+    height: max-content;
+    justify-content: center;
+    text-align: center;
+    top: 50px;
+    position: fixed;
+    font-size: 30px;
+    color: rgb(35, 25, 119);
 }
 
 h2 {                         /*fields*/
@@ -26,7 +36,7 @@ h2 {                         /*fields*/
 .container {
     width: 350px;
     height: 500px;
-    background-color: lightyellow;
+    background-color: lightsteelblue;
     border-radius: 5px;
     position: relative;    /*to set the form inside the container*/
     margin: 5% auto;       /*to set the nav bar in full width*/
@@ -44,7 +54,7 @@ form input {
     width: 100%;
     padding: 5px 0;
     margin: 5px 0;
-    border-bottom: 1px solid palevioletred;
+    border-bottom: 1px solid rgb(17, 149, 182);
     outline: none;
 }
 
@@ -59,8 +69,16 @@ form button {
     height: 40px;
     border-radius: 10px;
     margin:  0 15px;   /*space btn prev & next*/
-    color: rgb(197, 13, 136);
+    color: blueviolet;
     cursor: pointer;
+}
+
+form button:hover {
+    background-color: lightblue;
+    width: 110px;
+    height: 40px;
+    border-radius: 10px;
+    margin:  0 15px;   /*space btn prev & next*/
 }
 
 #form-1 {
@@ -97,22 +115,25 @@ form button {
    /* display: flex; */
   /* color: aqua; */
 }
+
 .input {
     margin: 10px 0;
     position: relative;
     display: flex;
 }
+
 .input label {
     display: inline-block;
 	margin-bottom: 2px;   
-    color: orchid;
+    color: darkblue;
 }
 
 .input-group label {
 	display: inline-block;
 	margin-bottom: 2px;   
-    color: orchid;
+    color: darkblue;
 }
+
 .input-group input {
 	display: block;
 	width: 100%;      /*i/p box width*/
@@ -124,81 +145,48 @@ form button {
 .success input{
 	border: 3px green solid;
 }
+
 .input-group i{
 	position: absolute;
 	right: 10px;
 	top: 35px;
 	visibility: hidden;
 }
+
 .error input{
 	border: 3px red solid;
 }
+
 .input-group p{
 	font-size: 15px;
 	color: red;
 	visibility: hidden;
 }
+
 .error p{
 	visibility: visible;
-}
-
-.nav ul {
-    margin: 20px;   /*nav bar size*/
-}
-
-.nav li {
-    display: inline;  /*list in the same line*/
-}
-
-.nav a {
-    display: inline-block;
-    padding: -50px;
-    color: white;
-    text-decoration: none;
-    justify-content: center;
-}
-
-.main-nav {
-    text-align: center;
-    justify-content: center;
-    font-size: 18px;
-    font-weight: lighter;
-    border-top: 1px solid palevioletred;
-    border-bottom: 1px solid palevioletred;
-    background-color: lightpink;
-    position: fixed;
-    top: 0;/*To place the menus in the top*/
-    width: 100%;
-    padding: -30px;
-}
-
-.main-nav li {
-    padding: 0 4%;
-}
-
-.nav a:hover {      /*hovering the menu*/
-    background-color: rgba(228, 58, 123, 0.3);
-}
-
-.main-header {
-    height: max-content;
-    padding-top: 80px;  /*moving the container top to main header*/
-    padding-bottom: 5px;
-    background-repeat: no-repeat;
-    background-size: cover;
 }
 
 select {
     width: 200px;     /*state field*/
 }
+
+#form-3[type="radio"] {
+    width: 10px;
+}
+
 .terms-box {
     display:block;
     padding: 10px;
     margin: 10px;
-    border: 3px solid #ddd;
+    border: 2px solid #ddd;
     background-color: #eee;
-    width: 300px;
+    width: 280px;
 }
+
+#terms { 
+    width: 20px;
+} 
 
 .thanks {
     /*min-height: 100vh; */
@@ -206,6 +194,5 @@ select {
     justify-content: center;
     align-items: center;
     top: 50%;
-    color: chocolate;
-    background-color: darkgray;
-}
+    color: blue;
+} 
