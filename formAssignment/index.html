@@ -3,7 +3,7 @@
     <head>
         <title>Employee Registration Form</title>
         <link rel = "stylesheet" href = "style.css" />
-        <!-- <script src="validation.js"></script> -->
+        <script defer src = "validation.js"></script>
     </head>
     <body>
         <header class="header">
@@ -17,25 +17,25 @@
             </div>
             <!--EMAIL-->
             <div class = "input-group">
-                <label for = "email">EMAIL *</label>
+                <label for = "email">EMAIL*</label>
                 <input type = "email" id = "email" class ="className" placeholder="eg:email@gmail.com" name = "email" onblur = "validateEmail()">
                 <p>Error Message</p>
             </div>
             <!--Password-->
             <div class = "input-group">
-                <label for = "password">PASSWORD *</label>
+                <label for = "password">PASSWORD*</label>
                 <input type = "password" id = "password" class ="className" placeholder="eg:Example@123" name = "password" onblur = "validatePassword()">
                 <p>Error Message</p>
             </div>
             <!--Confirm Password-->
             <div class = "input-group">
-                <label for = "confirm-password">CONFIRM PASSWORD *</label>
-                <input type = "password" id = "confirm-password" class ="className" placeholder = "Type the same password" name = "confirmpassword" onblur = "validateConfirmPassword()">
+                <label for = "confirm-password">CONFIRM PASSWORD*</label>
+                <input type = "password" id = "confirm-password" class ="className" placeholder = "re-enter password" name = "confirmpassword" onblur = "validateConfirmPassword()">
                 <p>Error Message</p>
             </div>
             <!--first name-->
             <div class = "input-group">
-                <label for = "username">FIRST NAME *</label>
+                <label for = "username">FIRST NAME*</label>
                 <input type = "text" id = "username" class ="className" placeholder = "eg:Name/name" name = "username" required = "required" onblur = "validateName()">
                 <p>Error Message</p>
             </div>
@@ -47,19 +47,19 @@
             </div>
             <!--Next button-->
             <div class = "btn-box">
-                <button type = "button" id = "next1" onclick="page1()">Next</button>
+                <button type = "button" id = "next1" onclick = "page1()">Next</button>
             </div>
 	    </form>
     
         <!--2nd others-->
-        <form id="form-2">
-            <div class="title">
-                <h2 class="heading">OTHERS</h2>
+        <form id = "form-2">
+            <div class = "title">
+                <h2 class = "heading">OTHERS</h2>
             </div>
             <!--dob-->
-            <div class="input-group">
-                <label for="dob" placeholder="Age limit:18 to 60">DOB *</label>
-                <input type="date" id="date" name="dateEntry" required="required" >
+            <div class = "input-group">
+                <label for = "dob" placeholder="Age limit:18 to 60">DOB*</label>
+                <input type = "date" id="date" name="dateEntry" required="required" >
             </div>
             <!--gender-->
             <div class="input">
@@ -79,7 +79,7 @@
             </div>
             <!--State-->
             <div class="input-group">
-                <label for="state">STATE *</label>
+                <label for="state">STATE*</label>
                 <input list="states" name="state" id="state">
                 <datalist id="states">
                 <option value="Andhra Pradesh">
@@ -95,7 +95,7 @@
             </div>
             <!--Phone Number-->
 		   <br> <div class="input-group">
-			    <label for="phonenumber">MOBILE NUMBER *</label>
+			    <label for="phonenumber">MOBILE NUMBER*</label>
 			    <input type="tel" id="phonenumber" placeholder="mobile number should start with above 6" name="phonenumber" onblur="validatePhone()">
 			    <p>Error Message</p>
 		    </div>
@@ -113,12 +113,14 @@
                 <h2 class="heading">WORK</h2>
             </div>
             <!--occupation-->
-            <div class="input-group">
-                <label for="occupation">OCCUPATION</label>
-                <br><input type="radio" name="occupation" value="Software">Software engineer
+            <div class="input">
+                <br><label for="occupation">OCCUPATION</label>
+                <br><input type="radio" name="occupation" value="yes">YES
+                <br><input type="radio" name="occupation" value="no">NO
+                <!--br><input type="radio" name="occupation" value="Software">Software engineer
                 <br><input type="radio" name="occupation" value="Business">Business
                 <br><input type="radio" name="occupation" value="Teacher">Teacher
-                <br><input type="radio" name="occupation" value="Other">Other
+                <br><input type="radio" name="occupation" value="Other"-->
             </div>
             
             <!--Overall Years of Experience-->
@@ -152,7 +154,7 @@
             </div>
             <!--Year of Passing-->
             <div class="input-group">
-                <br><label for="year">YEAR OF PASSING *</label>
+                <br><label for="year">YEAR OF PASSING*</label>
                 <input type="month" id="year" name="year" required="true"><br>
             </div>
             <!--Prev &Next button-->
@@ -170,7 +172,7 @@
             </div>
             <!--department/practice-->
             <div class="input-group">
-             <label for="department">DEPARTMENT/PRACTICE *</label><br>
+             <label for="department">DEPARTMENT/PRACTICE*</label><br>
              <input list="practice" name="department" id="department">
                 <datalist id="practice">
                 <option value=".NET">
@@ -195,7 +197,7 @@
         </form>        
 
     </div>
-     <script src="validation.js"></script>
+     <!-- <script src="validation.js"></script> -->
     </body>
 
 </html>
