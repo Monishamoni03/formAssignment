@@ -117,7 +117,7 @@ form button:hover {
 }
 
 .input {
-    margin: 10px 0;
+    /* margin: 10px 0; */
     position: relative;
     display: flex;
 }
@@ -171,9 +171,9 @@ select {
     width: 200px;     /*state field*/
 }
 
-#form-3[type="radio"] {
-    width: 10px;
-}
+/* #form-3[type="radio"] { */
+    /* width: 10px; */
+/* } */
 
 .terms-box {
     display:block;
