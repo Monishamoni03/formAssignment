@@ -4,84 +4,85 @@ const phoneNumberInput = document.querySelector('#phonenumber');
 const passwordInput = document.querySelector('#password');
 const confirmPasswordInput = document.querySelector('#confirm-password');
 
-function newPage() {
+function thanksPage() {
 	window.location.href="thanks.html";
 }
 
-var check1 = 0;
-var check2 = 0;
-var check3 = 0;
-var check4 = 0;
-var check5 = 0;
+var nameValidation = 0;
+var emailValidation = 0;
+var phoneValidation = 0;
+var passwordValidation = 0;
+var confirmPasswordValidation = 0;
 
+
+//first name
 function validateName() {
-	//first name
 	if(usernameInput.value.trim() == ''){
 		setError(usernameInput,'Name cannot be blank');
-		check1 = 0;
+		nameValidation = 0;
 	}else if(isNameValid(usernameInput.value)){
 		setSuccess(usernameInput);
-		check1 = 1;
+		nameValidation = 1;
 	}
 	else{
 		setError(usernameInput,'Name must be min 5 & max 15 characters & it should contain only alphabets');
-		check1 = 0;
+		nameValidation = 0;
 	}
 }
 
+//email
 function validateEmail() {
-	//email
 	if(emailInput.value.trim() == ''){
 		setError(emailInput,'Email cannot be blank');
-		check2 = 0;
+		emailValidation = 0;
 	}else if(isEmailValid(emailInput.value)){
 		setSuccess(emailInput);
-		check2 = 1;
+		emailValidation = 1;
 	}else{
 		setError(emailInput,'Invalid email');
-		check2 = 0;
+		emailValidation = 0;
 	}
 }
 
+//mobile number
 function validatePhone() {
-	//mobile number
 	if(phoneNumberInput.value.trim() == ''){
 	   	setError(phoneNumberInput,'Mobile number cannot be blank');
-		check3 = 0;
+		phoneValidation = 0;
     }else if(!isPhoneNumber(phoneNumberInput.value)){
 	   	setError(phoneNumberInput,'Invalid Phone number');
-		check3 = 0;
+		phoneValidation = 0;
     }else{
 	   	setSuccess(phoneNumberInput);
-		check3 = 1;
+		phoneValidation = 1;
 	}
 }
 
+//password
 function validatePassword() {
-	//password
 	if(passwordInput.value.trim() == ''){
 		setError(passwordInput,'Password cannot be blank');
-		check4 = 0;
+		passwordValidation = 0;
 	}else if (!isPassword(passwordInput.value)) {
 		setError(passwordInput,'Invalid Password');
-		check4= 0;
-	}else{
+		passwordValidation =  0;
+	}else {
 		setSuccess(passwordInput);
-		check4 = 1;
+		passwordValidation = 1;
 	}
 }
 
+//confirm password
 function validateConfirmPassword() {
-	//confirm password
-	if(confirmPasswordInput.value.trim() == ''){
+	if(confirmPasswordInput.value.trim() == '') {
 		setError(confirmPasswordInput,'Confirm Password cannot be blank');
-		check5 = 0;
-	}else if (confirmPasswordInput.value!==passwordInput.value){
+		confirmPasswordValidation = 0;
+	}else if (confirmPasswordInput.value!==passwordInput.value) {
 		setError(confirmPasswordInput,'Password does not match');
-		check5 = 0;
-	}else{
+		confirmPasswordValidation = 0;
+	}else {
 		setSuccess(confirmPasswordInput);
-		check5 = 1;
+		confirmPasswordValidation = 1;
 	}
 }
 
@@ -154,8 +155,8 @@ var prev3 = document.getElementById('prev3');
 var prev4 = document.getElementById('prev4');
 
 
-function page1() {
-	if(check1 == 1 && check2 == 1 && check4 == 1 && check5 == 1) {
+function othersPage() {
+	if(nameValidation == 1 && emailValidation == 1 && check4 == 1 && check5 == 1) {
 		next1.onclick = function(){
 			form1.style.left = "-400px";
 			form2.style.left = "20px";
@@ -170,7 +171,7 @@ function page1() {
     }
 }
 
-function page2() {
+function workPage() {
 	if(check3 == 1) {
 		next2.onclick = function(){
 			form2.style.left = "-400px";
@@ -186,7 +187,7 @@ function page2() {
     }
 }
 
-function page3() {
+function educationPage() {
 	next3.onclick = function(){
 		form3.style.left = "-400px";
 		form4.style.left = "20px";
@@ -197,7 +198,7 @@ function page3() {
 	}
 }
 
-function page4() {
+function teamPage() {
 	next4.onclick = function(){
 		form4.style.left = "-400px";
 		form5.style.left = "20px";
@@ -221,7 +222,6 @@ function page4() {
 	   alert("Please accept the terms and condition");
   }
 }
-
 /*next1.onclick = function(){
     form1.style.left = "-400px";
     form2.style.left = "20px";
